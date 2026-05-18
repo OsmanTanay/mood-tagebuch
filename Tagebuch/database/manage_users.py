@@ -28,9 +28,7 @@ def update_user(user_id, user_name=None, user_surname=None, user_sex=None, user_
     updates = []
     params = []
 
-    if user_id:
-        updates.append("event_name = ?")
-        params.append(user_id)
+
     if user_id:
         updates.append("user_name = ?")
         params.append(user_name)
@@ -48,7 +46,7 @@ def update_user(user_id, user_name=None, user_surname=None, user_sex=None, user_
         params.append(user_interests)
 
 
-    params.append(id)
+    params.append(user_id)
     cursor.execute(f"UPDATE user SET {', '.join(updates)} WHERE id = ?", params)
     connection.commit()
     connection.close()
