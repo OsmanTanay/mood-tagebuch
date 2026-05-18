@@ -41,7 +41,7 @@ def update_event(id, event_user_id, event_name=None, event_type=None, event_date
         params.append(event_name)
     if event_user_id:
         updates.append("event_user_id = ?")
-        params.append(event_name)
+        params.append(event_user_id)
     if event_type:
         updates.append("event_type = ?")
         params.append(event_type)
