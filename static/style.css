@@ -1,0 +1,361 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.headerContainer {
+    display: flex;
+    background-color: #1f1f1f;
+    color: white;
+    height: fit-content;
+}
+
+.headerTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.7rem;
+    align-content: center;
+}
+
+/* Nav */
+
+.headerNavLeftContainer {
+    display: flex;
+    margin: 0 auto;
+    gap: 3.5rem;
+}
+
+.headerNavRightContainer {
+    display: flex;
+    margin-right: 2.5rem;
+    padding: 0.5rem;
+    gap: 0.2rem
+}
+
+.headerNavItem {
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+    font-weight: 540;
+    font-size: 1.2rem;
+    color: white;
+    align-content: center;
+}
+
+.headerNavItem:hover {
+    border-bottom: 3px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+
+.headerButton {
+    margin-top: 0.3rem;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.headerButton:hover svg{
+    fill: aqua;
+    transition: fill 0.5s ease-in-out;
+}   
+
+.headerContainer svg {
+    fill: white;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.headerSearch {
+    margin-left: 1rem;
+    outline: none;
+    border-radius: 0.4rem;
+    border: 2px solid gray;
+    background-color: inherit;
+    color: white;
+    padding: 0.7rem;
+    font-size: 1rem;
+}
+
+.headerSearch:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Main */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 2.5rem auto;
+    width: fit-content;
+    background-color: #1f1f1f;
+    padding: 2.5rem;
+    border-radius: 0.7rem;
+}
+
+.mainTitle {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 550;
+}
+
+.mainContentContainer {
+    display: flex;
+    padding: 1rem 4rem;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+/* Name */
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.nameTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nameInput {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nameInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Type */
+.typeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.typeTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.typeSelect {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.typeSelect:active {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Feeling */
+
+.feelingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem;
+}
+
+.feelingTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.feelingOutput {
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    padding: 0.6rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Location */
+.locationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.locationTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.locationInput {
+    padding: 0.7rem;
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.locationInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Description */
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 0.7rem;
+}
+
+.descriptionTitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.descriptionInput {
+    background-color: #1f1f1f;
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 18rem;
+    height: 5rem;
+    padding: 1rem;
+    resize: none;
+    outline: none;
+}
+
+.descriptionInput:focus {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.descriptionInput::placeholder {
+    padding: 0.1rem;
+}
+
+/* Submit */
+.submitButton {
+    width: fit-content;
+    background-color: #1f1f1f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid gray;
+    color: white;
+    margin: 0 auto;
+    padding: 0.9rem;
+    border-radius: 0.65rem;
+}
+
+.submitButton:hover {
+    border: 2px solid aqua;
+    transition: border-color 0.5s ease-in-out;
+}
+
+/* Eintraege */
+.anzeigeContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1f1f1f;
+}
+
+.anzeigeContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    max-width: 80rem;
+}
+
+.anzeigeEintrag {
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    border: 2px solid gray;
+    border-radius: 0.7rem;
+    padding: 1rem 1em;
+}
+
+.anzeigeName {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.anzeigeTyp {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.anzeigeDescription {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.anzeigeEmpfehlung {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.anzeigeTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 550;
+}
+
+.anzeigeLocation {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.anzeigeFeeling {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.anzeigeDate {
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.anzeigeDelete {
+    width: fit-content;
+    margin-top: auto;
+    background-color: #1f1f1f;
+    border: none;
+    cursor: pointer;
+}
+
+.anzeigeDelete svg {
+    fill: red;
+}
