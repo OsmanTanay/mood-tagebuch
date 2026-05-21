@@ -69,15 +69,6 @@ The app runs at:
 http://localhost:5000
 ```
 
-## Screenshots
-
-Add screenshots here.
-
-```markdown
-![Mood Entry Form](screenshots/form.png)
-![Entry Overview](screenshots/entries.png)
-```
-
 ## Context
 
 Developed as part of the B.Sc. Artificial Intelligence and Data Science program at Hochschule Aalen.
