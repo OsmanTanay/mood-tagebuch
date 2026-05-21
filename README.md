@@ -1,60 +1,83 @@
-# Stimmungstagebuch – KI-gestützte Webanwendung
+# AI Mood Recommendation App
 
-Eine Webanwendung, die Nutzern ermöglicht, tägliche Erlebnisse und Stimmungen einzutragen und darauf basierend automatisch personalisierte KI-Empfehlungen zu erhalten.
-
-## Funktionsweise
-
-1. Nutzer füllt ein Webformular aus – Name, Stimmungswert (1–10), Ereignistyp, Ort und Beschreibung
-2. Formulardaten werden per **JSON via Fetch API** an das Flask-Backend gesendet
-3. Das Backend verarbeitet die Daten und sendet sie an die **OpenAI API (GPT-3.5-turbo)**
-4. Das Sprachmodell generiert eine kurze, alltagsnahe Empfehlung (max. 2–3 Sätze)
-5. Eintrag und Empfehlung werden in einer **SQLite-Datenbank** gespeichert
-6. Alle Einträge werden dynamisch im Frontend geladen und können einzeln gelöscht werden
-
-## Technologien
-
-| Bereich | Technologie |
-|---|---|
-| Backend | Python, Flask |
-| Datenbank | SQLite |
-| KI-Integration | OpenAI API (GPT-3.5-turbo) |
-| Frontend | HTML, CSS, JavaScript (Fetch API) |
-| Datenbankzugriff | Eigene CRUD-Module für Events und User |
+A Flask-based web application that allows users to submit daily mood entries and receive AI-generated personalized recommendations based on their context.
 
 ## Features
 
-- Stimmungseintrag mit Skala 1–10 erstellen
-- Automatische KI-Empfehlung basierend auf Eintrag und Nutzerprofil
-- Alle Einträge chronologisch (neueste zuerst) anzeigen
-- Einzelne Einträge löschen
-- Nutzerverwaltung mit eigenem Datenbankmodul
+- Create daily mood entries with mood score, event type, location and description
+- Generate personalized recommendations using the OpenAI API
+- Store mood entries and recommendations in a SQLite database
+- Display all entries dynamically in the frontend
+- Delete individual entries
+- Basic user and event data handling with custom CRUD modules
 
-## Projektstruktur
+## Tech Stack
 
+| Area | Technology |
+|---|---|
+| Backend | Python, Flask |
+| Frontend | HTML, CSS, JavaScript |
+| API Communication | Fetch API, JSON |
+| Database | SQLite |
+| AI Integration | OpenAI API |
+
+## Project Structure
+
+```text
+ai-mood-recommendation-app/
+├── database/
+├── models/
+├── static/
+├── templates/
+├── app.py
+├── requirements.txt
+└── README.md
 ```
-Tagebuch/
-├── app.py              # Flask-Routen und Hauptlogik
-├── database/           # SQLite-Datenbankdatei
-├── models/             # CRUD-Module für Events und User
-├── static/             # CSS, JavaScript (Formular & Anzeige)
-└── templates/          # HTML-Templates
-```
 
-## Projektstart
+## How It Works
+
+1. The user submits a mood entry through a web form.
+2. The frontend sends the data as JSON to the Flask backend.
+3. The backend processes the input and sends the context to the OpenAI API.
+4. The AI model generates a short personalized recommendation.
+5. The entry and recommendation are stored in SQLite.
+6. Saved entries are displayed dynamically in the frontend.
+
+## Setup
+
+Install dependencies:
 
 ```bash
-# Abhängigkeiten installieren
 pip install -r requirements.txt
+```
 
-# OpenAI API-Key setzen
-export OPENAI_API_KEY=dein-api-key
+Set your OpenAI API key:
 
-# Anwendung starten
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
+Run the application:
+
+```bash
 python app.py
 ```
 
-Die App läuft dann unter `http://localhost:5000`
+The app runs at:
 
-## Entwickelt von
+```text
+http://localhost:5000
+```
 
-Osman Tanay – Gruppenprojekt im Rahmen des Wahlpflichtfachs "Programmieren in Python" (1. Semester), B.Sc. Artificial Intelligence and Data Science, Hochschule Aalen
+## Screenshots
+
+Add screenshots here.
+
+```markdown
+![Mood Entry Form](screenshots/form.png)
+![Entry Overview](screenshots/entries.png)
+```
+
+## Context
+
+Developed as part of the B.Sc. Artificial Intelligence and Data Science program at Hochschule Aalen.
