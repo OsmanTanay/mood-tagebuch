@@ -51,11 +51,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Set your OpenAI API key:
-
-```bash
-export OPENAI_API_KEY=your_api_key_here
-```
+Set your OpenAI API key as an environment variable before starting the application.
 
 Run the application:
 
@@ -63,7 +59,7 @@ Run the application:
 python app.py
 ```
 
-The app runs at:
+The application runs locally on:
 
 ```text
 http://localhost:5000
